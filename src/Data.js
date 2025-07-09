@@ -186,7 +186,6 @@ var a = 5;
 A closure is a function that remembers the variables from its lexical scope even when it's executed outside that scope.
 
 Example:
-\`\`\`js
 function outer() {
   let count = 0;
   return function inner() {
@@ -198,7 +197,6 @@ function outer() {
 const counter = outer();
 counter(); // 1
 counter(); // 2
-\`\`\`
     `
   },
   {
@@ -208,21 +206,17 @@ counter(); // 2
 - === checks for both value and type.
 
 Example:
-\`\`\`js
 0 == '0'   // true
 0 === '0'  // false
-\`\`\`
     `
   },
   {
     question: "What are arrow functions and how are they different?",
     answer: `
-Arrow functions are a shorter syntax for writing functions and do not have their own \`this\`.
+Arrow functions are a shorter syntax for writing functions and do not have their own this.
 
 Example:
-\`\`\`js
 const add = (a, b) => a + b;
-\`\`\`
 
 Differences:
 - No \`this\` binding
@@ -236,13 +230,11 @@ Differences:
 A promise is an object representing the eventual completion or failure of an async operation.
 
 Example:
-\`\`\`js
 let promise = new Promise((resolve, reject) => {
   setTimeout(() => resolve("Done!"), 1000);
 });
 
 promise.then(result => console.log(result));
-\`\`\`
     `
   },
   {
@@ -251,7 +243,6 @@ promise.then(result => console.log(result));
 Debounce delays execution until a certain amount of time has passed since the last call.
 
 Example:
-\`\`\`js
 function debounce(fn, delay) {
   let timer;
   return function(...args) {
@@ -259,7 +250,6 @@ function debounce(fn, delay) {
     timer = setTimeout(() => fn.apply(this, args), delay);
   };
 }
-\`\`\`
     `
   },
   {
@@ -268,14 +258,12 @@ function debounce(fn, delay) {
 Currying is transforming a function that takes multiple arguments into a sequence of functions that each take one argument.
 
 Example:
-\`\`\`js
 function multiply(a) {
   return function(b) {
     return a * b;
   };
 }
 console.log(multiply(2)(3)); // 6
-\`\`\`
     `
   },
   {
@@ -284,10 +272,8 @@ console.log(multiply(2)(3)); // 6
 Use recursion with \`flat\` or manually traverse:
 
 Example:
-\`\`\`js
 const flatten = arr => arr.flat(Infinity);
 console.log(flatten([1, [2, [3, 4], 5], 6]));
-\`\`\`
     `
   }
 ];
