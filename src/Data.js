@@ -140,4 +140,154 @@ export const Data = [
     question: "What are Lifecycle Methods in React?",
     answer: "Lifecycle methods like componentDidMount and componentWillUnmount run at specific points in a class component's life."
   }
+
+  {
+    question: "What is JavaScript? How is it different from Java?",
+    answer: `
+JavaScript is a lightweight, interpreted language primarily used for web development. It’s dynamically typed and executed in browsers or Node.js.
+
+Java is a compiled, statically typed language that runs on the JVM.
+
+Key Differences:
+- JavaScript is prototype-based, Java is class-based.
+- JavaScript runs in browsers, Java runs on JVM.
+    `
+  },
+  {
+    question: "Explain the difference between var, let, and const.",
+    answer: `
+- var: function-scoped, can be re-declared and updated.
+- let: block-scoped, can be updated but not re-declared.
+- const: block-scoped, cannot be updated or re-declared (but can hold mutable objects).
+
+Example:
+\`\`\`js
+var x = 10;
+let y = 20;
+const z = 30;
+\`\`\`
+    `
+  },
+  {
+    question: "What is hoisting in JavaScript?",
+    answer: `
+Hoisting is JavaScript's behavior of moving declarations to the top of their scope before code execution.
+
+Example:
+\`\`\`js
+console.log(a); // undefined
+var a = 5;
+\`\`\`
+    `
+  },
+  {
+    question: "What are closures in JavaScript?",
+    answer: `
+A closure is a function that remembers the variables from its lexical scope even when it's executed outside that scope.
+
+Example:
+\`\`\`js
+function outer() {
+  let count = 0;
+  return function inner() {
+    count++;
+    console.log(count);
+  };
+}
+
+const counter = outer();
+counter(); // 1
+counter(); // 2
+\`\`\`
+    `
+  },
+  {
+    question: "What is the difference between == and ===?",
+    answer: `
+- == checks for equality with type coercion.
+- === checks for both value and type.
+
+Example:
+\`\`\`js
+0 == '0'   // true
+0 === '0'  // false
+\`\`\`
+    `
+  },
+  {
+    question: "What are arrow functions and how are they different?",
+    answer: `
+Arrow functions are a shorter syntax for writing functions and do not have their own \`this\`.
+
+Example:
+\`\`\`js
+const add = (a, b) => a + b;
+\`\`\`
+
+Differences:
+- No \`this\` binding
+- Cannot be used as constructors
+- No \`arguments\` object
+    `
+  },
+  {
+    question: "Explain the concept of promises in JavaScript.",
+    answer: `
+A promise is an object representing the eventual completion or failure of an async operation.
+
+Example:
+\`\`\`js
+let promise = new Promise((resolve, reject) => {
+  setTimeout(() => resolve("Done!"), 1000);
+});
+
+promise.then(result => console.log(result));
+\`\`\`
+    `
+  },
+  {
+    question: "What is the debounce function?",
+    answer: `
+Debounce delays execution until a certain amount of time has passed since the last call.
+
+Example:
+\`\`\`js
+function debounce(fn, delay) {
+  let timer;
+  return function(...args) {
+    clearTimeout(timer);
+    timer = setTimeout(() => fn.apply(this, args), delay);
+  };
+}
+\`\`\`
+    `
+  },
+  {
+    question: "What is currying in JavaScript?",
+    answer: `
+Currying is transforming a function that takes multiple arguments into a sequence of functions that each take one argument.
+
+Example:
+\`\`\`js
+function multiply(a) {
+  return function(b) {
+    return a * b;
+  };
+}
+console.log(multiply(2)(3)); // 6
+\`\`\`
+    `
+  },
+  {
+    question: "Print all elements of the nested array arr = [1, [2, [3, 4], 5], 6]",
+    answer: `
+Use recursion with \`flat\` or manually traverse:
+
+Example:
+\`\`\`js
+const flatten = arr => arr.flat(Infinity);
+console.log(flatten([1, [2, [3, 4], 5], 6]));
+\`\`\`
+    `
+  }
 ];
