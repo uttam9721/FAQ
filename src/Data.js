@@ -139,7 +139,7 @@ export const Data = [
   {
     question: "What are Lifecycle Methods in React?",
     answer: "Lifecycle methods like componentDidMount and componentWillUnmount run at specific points in a class component's life."
-  }
+  },
 
   {
     question: "What is JavaScript? How is it different from Java?",
