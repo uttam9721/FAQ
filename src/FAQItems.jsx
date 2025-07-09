@@ -17,7 +17,7 @@ const FAQItems = ({ faq, idx }) => {
     
     <div className='faq-box'>
       <div className='que' onClick={handleClick}>
-        <button>{isShow ? '+' : '-'}</button>
+        <button>{isShow ? '-' : '+'}</button>
         <div>{faq.question}</div>
       </div>
       {isShow && <div>{faq.answer}</div>}
