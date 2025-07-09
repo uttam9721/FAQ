@@ -140,140 +140,162 @@ export const Data = [
     question: "What are Lifecycle Methods in React?",
     answer: "Lifecycle methods like componentDidMount and componentWillUnmount run at specific points in a class component's life."
   },
-
+  // ✅ JavaScript Questions (from uploaded PDF)
   {
     question: "What is JavaScript? How is it different from Java?",
-    answer: `
-JavaScript is a lightweight, interpreted language primarily used for web development. It’s dynamically typed and executed in browsers or Node.js.
-
-Java is a compiled, statically typed language that runs on the JVM.
-
-Key Differences:
-- JavaScript is prototype-based, Java is class-based.
-- JavaScript runs in browsers, Java runs on JVM.
-    `
+    answer: "JavaScript is a lightweight, interpreted language primarily used for enhancing interactivity on websites..."
   },
   {
     question: "Explain the difference between var, let, and const.",
-    answer: `
-- var: function-scoped, can be re-declared and updated.
-- let: block-scoped, can be updated but not re-declared.
-- const: block-scoped, cannot be updated or re-declared (but can hold mutable objects).
-
-Example:
-\`\`\`js
-var x = 10;
-let y = 20;
-const z = 30;
-\`\`\`
-    `
+    answer: "var is function-scoped and can be re-declared. let and const are block-scoped, where const cannot be re-declared or updated."
+  },
+  {
+    question: "What are the data types in JavaScript?",
+    answer: "JavaScript has primitive types (String, Number, Boolean, Null, Undefined, BigInt, Symbol) and reference types (Object, Array, Function)."
   },
   {
     question: "What is hoisting in JavaScript?",
-    answer: `
-Hoisting is JavaScript's behavior of moving declarations to the top of their scope before code execution.
-
-Example:
-\`\`\`js
-console.log(a); // undefined
-var a = 5;
-\`\`\`
-    `
+    answer: "Hoisting is JavaScript's behavior of moving declarations to the top of their scope before execution."
   },
   {
     question: "What are closures in JavaScript?",
-    answer: `
-A closure is a function that remembers the variables from its lexical scope even when it's executed outside that scope.
-
-Example:
-function outer() {
-  let count = 0;
-  return function inner() {
-    count++;
-    console.log(count);
-  };
-}
-
-const counter = outer();
-counter(); // 1
-counter(); // 2
-    `
+    answer: "A closure is a function that remembers variables from its lexical scope, even when called outside that scope."
   },
   {
-    question: "What is the difference between == and ===?",
-    answer: `
-- == checks for equality with type coercion.
-- === checks for both value and type.
-
-Example:
-0 == '0'   // true
-0 === '0'  // false
-    `
+    question: "What is the difference between == and === in JavaScript?",
+    answer: "== performs type coercion; === checks both value and type strictly."
   },
   {
-    question: "What are arrow functions and how are they different?",
-    answer: `
-Arrow functions are a shorter syntax for writing functions and do not have their own this.
-
-Example:
-const add = (a, b) => a + b;
-
-Differences:
-- No \`this\` binding
-- Cannot be used as constructors
-- No \`arguments\` object
-    `
+    question: "Explain how the this keyword works in JavaScript.",
+    answer: "this refers to the object that called the function. In arrow functions, this is lexically inherited."
+  },
+  {
+    question: "What is an event in JavaScript? How do you prevent default behavior?",
+    answer: "An event is a browser interaction like click or keypress. Use event.preventDefault() to stop default behavior."
+  },
+  {
+    question: "What are arrow functions, and how are they different from regular functions?",
+    answer: "Arrow functions have shorter syntax, no own 'this', cannot be constructors, and lack an arguments object."
+  },
+  {
+    question: "What is NaN in JavaScript? How do you check if a value is NaN?",
+    answer: "NaN stands for Not-a-Number. Use Number.isNaN() or isNaN() to check for it."
+  },
+  {
+    question: "What is the difference between synchronous and asynchronous programming in JavaScript?",
+    answer: "Synchronous runs in sequence; async allows tasks to run concurrently using callbacks, promises, or async/await."
   },
   {
     question: "Explain the concept of promises in JavaScript.",
-    answer: `
-A promise is an object representing the eventual completion or failure of an async operation.
-
-Example:
-let promise = new Promise((resolve, reject) => {
-  setTimeout(() => resolve("Done!"), 1000);
-});
-
-promise.then(result => console.log(result));
-    `
+    answer: "A Promise represents an async operation result. It has states: pending, fulfilled, and rejected."
   },
   {
-    question: "What is the debounce function?",
-    answer: `
-Debounce delays execution until a certain amount of time has passed since the last call.
-
-Example:
-function debounce(fn, delay) {
-  let timer;
-  return function(...args) {
-    clearTimeout(timer);
-    timer = setTimeout(() => fn.apply(this, args), delay);
-  };
-}
-    `
+    question: "What are callback functions? How are they used?",
+    answer: "A callback is a function passed to another function to be executed later."
   },
   {
-    question: "What is currying in JavaScript?",
-    answer: `
-Currying is transforming a function that takes multiple arguments into a sequence of functions that each take one argument.
-
-Example:
-function multiply(a) {
-  return function(b) {
-    return a * b;
-  };
-}
-console.log(multiply(2)(3)); // 6
-    `
+    question: "What are JavaScript prototypes and how do they work?",
+    answer: "Prototypes allow inheritance in JavaScript. Every object has a prototype chain."
   },
   {
-    question: "Print all elements of the nested array arr = [1, [2, [3, 4], 5], 6]",
-    answer: `
-Use recursion with \`flat\` or manually traverse:
-
-Example:
-const flatten = arr => arr.flat(Infinity);
-console.log(flatten([1, [2, [3, 4], 5], 6]));
-    `
+    question: "What is the event loop in JavaScript?",
+    answer: "The event loop handles async operations by checking the call stack and task queues."
+  },
+  {
+    question: "Explain how map(), filter(), and reduce() functions work.",
+    answer: "map transforms each array element. filter selects elements based on condition. reduce aggregates values."
+  },
+  {
+    question: "What is the purpose of async and await in JavaScript?",
+    answer: "They make asynchronous code look synchronous, simplifying promise chaining."
+  },
+  {
+    question: "How does JavaScript handle memory management and garbage collection?",
+    answer: "JavaScript automatically frees memory by garbage collecting objects no longer referenced."
+  },
+  {
+    question: "What is the debounce function in JavaScript?",
+    answer: "Debounce delays execution until after a pause; throttle limits how often a function runs."
+  },
+  {
+    question: "What is destructuring in JavaScript?",
+    answer: "Destructuring lets you unpack values from arrays/objects into variables."
+  },
+  {
+    question: "Explain the concept of event delegation in JavaScript.",
+    answer: "Event delegation uses a parent listener to manage events from child elements."
+  },
+  {
+    question: "What are generators in JavaScript, and how do they differ from regular functions?",
+    answer: "Generators use function* and yield; they pause and resume execution."
+  },
+  {
+    question: "What are JavaScript modules, and how do you use import and export?",
+    answer: "Modules split code into reusable files using export and import statements."
+  },
+  {
+    question: "What is the Proxy object in JavaScript, and what are its use cases?",
+    answer: "Proxy allows defining custom behavior for fundamental operations on objects."
+  },
+  {
+    question: "Explain currying in JavaScript.",
+    answer: "Currying transforms a function with multiple arguments into a series of functions with one argument."
+  },
+  {
+    question: "What are the differences between deep cloning and shallow cloning in JavaScript?",
+    answer: "Shallow copy copies references; deep copy duplicates all nested objects."
+  },
+  {
+    question: "What is memoization, and how would you implement it in JavaScript?",
+    answer: "Memoization caches function results for better performance on repeated calls."
+  },
+  {
+    question: "Explain the concept of weak maps and weak sets in JavaScript.",
+    answer: "WeakMap/WeakSet store weak references to objects, allowing garbage collection."
+  },
+  {
+    question: "What is the difference between function declarations and function expressions?",
+    answer: "Declarations are hoisted; expressions are not."
+  },
+  {
+    question: "What is a JavaScript Symbol, and when would you use it?",
+    answer: "Symbols are unique and immutable, often used as non-enumerable object property keys."
+  },
+  {
+    question: "How do the apply, call, and bind methods work in JavaScript?",
+    answer: "apply and call invoke functions with a given this; bind returns a new function."
+  },
+  {
+    question: "What is the purpose of the async iterator, and how does it differ from a regular iterator?",
+    answer: "Async iterators handle asynchronous data streams using for-await-of loops."
+  },
+  {
+    question: "How can you prevent object mutation in JavaScript?",
+    answer: "Use Object.freeze(), spread syntax, or deep cloning."
+  },
+  {
+    question: "Reverse Words in a String in JavaScript.",
+    answer: "Split the string by spaces, reverse the array, and join back."
+  },
+  {
+    question: "Check for Balanced Parentheses.",
+    answer: "Use a stack to track opening and closing parentheses."
+  },
+  {
+    question: "Remove Duplicates from an Array.",
+    answer: "Use Set or filter with indexOf to remove duplicates."
+  },
+  {
+    question: "Find the Largest Sum of Contiguous Subarray (Kadane’s Algorithm)",
+    answer: "Iterate through the array, tracking max current sum and global max."
+  },
+  {
+    question: "Find the First Non-Repeated Character in a String.",
+    answer: "Use a frequency map to count and find the first character with count 1."
+  },
+  {
+    question: "Find Missing Number in a Sequence (O(n) Time Complexity).",
+    answer: "Calculate expected sum and subtract actual sum to find the missing number."
   }
+
 ];
