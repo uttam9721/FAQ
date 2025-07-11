@@ -1,5 +1,125 @@
 // faqData.js
 export const Data = [
+  // 🔹 HTML & CSS Interview Questions
+  {
+    question: "What is HTML?",
+    answer: "HTML (HyperText Markup Language) is the standard language for creating the structure of web pages."
+  },
+  {
+    question: "What are semantic HTML elements?",
+    answer: "Semantic elements clearly describe their meaning, like <header>, <footer>, <article>, and <section>."
+  },
+  {
+    question: "What is the difference between <div> and <span>?",
+    answer: "<div> is a block-level element, while <span> is inline. Both are used for grouping elements."
+  },
+  {
+    question: "What is the use of the <meta> tag?",
+    answer: "The <meta> tag defines metadata like charset, viewport, and SEO-related information."
+  },
+  {
+    question: "What is the purpose of the 'alt' attribute in images?",
+    answer: "The 'alt' attribute provides alternative text for images, improving accessibility and SEO."
+  },
+  {
+    question: "What is the difference between id and class?",
+    answer: "'id' is unique and used once per page. 'class' can be reused on multiple elements."
+  },
+  {
+    question: "What is the difference between HTML and XHTML?",
+    answer: "XHTML is stricter than HTML and requires proper closing of all tags and attributes to be quoted."
+  },
+  {
+    question: "What is the use of <iframe> tag?",
+    answer: "<iframe> is used to embed another HTML page inside the current page."
+  },
+  {
+    question: "What are void elements in HTML?",
+    answer: "Void elements are self-closing and do not have closing tags, like <img>, <input>, <br>, <hr>."
+  },
+  {
+    question: "What is the difference between <script> tag placed in <head> vs <body>?",
+    answer: "Scripts in <head> may delay rendering. Placing them at the end of <body> improves performance."
+
+  },
+
+  // CSS Questions
+  {
+    question: "What is CSS?",
+    answer: "CSS (Cascading Style Sheets) is used to style and layout HTML elements."
+  },
+  {
+    question: "What are the types of CSS?",
+    answer: "Inline, Internal, and External CSS."
+  },
+  {
+    question: "What is the difference between relative, absolute, and fixed positioning?",
+    answer: `- relative: Positioned relative to its normal position  
+- absolute: Positioned relative to nearest positioned ancestor  
+- fixed: Positioned relative to the viewport and doesn't scroll`
+  },
+  {
+    question: "What is specificity in CSS?",
+    answer: "Specificity defines which CSS rule is applied when multiple rules target the same element."
+  },
+  {
+    question: "What is the Box Model in CSS?",
+    answer: "The box model includes content, padding, border, and margin."
+  },
+  {
+    question: "What is the difference between em and rem units?",
+    answer: "'em' is relative to the parent font-size, 'rem' is relative to the root element."
+  },
+  {
+    question: "What is the difference between visibility: hidden and display: none?",
+    answer: "`visibility: hidden` hides the element but takes up space. `display: none` removes it completely from layout."
+  },
+  {
+    question: "What are pseudo-classes in CSS?",
+    answer: "Pseudo-classes define a special state of an element like :hover, :focus, :nth-child()."
+  },
+  {
+    question: "How to apply styles to multiple selectors?",
+    answer: "Separate them with commas: `h1, h2, p { color: red; }`"
+  },
+  {
+    question: "What is the z-index in CSS?",
+    answer: "z-index controls the vertical stacking order of elements (higher value = closer to front)."
+  },
+  {
+    question: "How do media queries work in CSS?",
+    answer: `Media queries make your website responsive by applying styles based on screen width:
+
+\`\`\`css
+@media (max-width: 768px) {
+  body {
+    background-color: lightblue;
+  }
+}
+\`\`\``
+  },
+  {
+    question: "What is the difference between inline, block, and inline-block?",
+    answer: `- inline: does not start on a new line, cannot set width/height  
+- block: starts on a new line, can set width/height  
+- inline-block: behaves like inline but respects width/height`
+  },
+  {
+    question: "How to center a div horizontally?",
+    answer: `Use margin auto:
+
+\`\`\`css
+div {
+  width: 200px;
+  margin: 0 auto;
+}
+\`\`\``
+  },
+  {
+    question: "What is the difference between max-width and width?",
+    answer: "`width` sets a fixed width. `max-width` allows flexibility and prevents overflow on smaller screens."
+  }
+  ,
   {
     question: "What is React?",
     answer: "React is a JavaScript library used for building user interfaces, primarily for single-page applications. It’s maintained by Facebook and focuses on component-based architecture."
@@ -577,6 +697,161 @@ const mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost:27017/mydb')
   .then(() => console.log('MongoDB connected'))
   .catch(err => console.error(err));
+\`\`\``
+  }
+  ,
+  // 🔹 Node.js Questions
+  {
+    question: "What is Node.js?",
+    answer: "Node.js is a JavaScript runtime built on Chrome's V8 engine that allows you to run JavaScript on the server-side."
+  },
+  {
+    question: "Is Node.js single-threaded or multi-threaded?",
+    answer: "Node.js is single-threaded with event loop and non-blocking I/O operations, enabling asynchronous programming."
+  },
+  {
+    question: "What is the use of npm?",
+    answer: "npm (Node Package Manager) is used to install, manage, and share packages/modules in Node.js."
+  },
+  {
+    question: "How do you initialize a Node.js project?",
+    answer: "Use the command `npm init` or `npm init -y` to create a package.json file."
+  },
+  {
+    question: "How do you import and export modules in Node.js?",
+    answer: `Use \`require()\` and \`module.exports\` in CommonJS:
+\`\`\`js
+// sum.js
+module.exports = (a, b) => a + b;
+
+// app.js
+const sum = require('./sum');
+console.log(sum(2, 3));
+\`\`\``
+  },
+  {
+    question: "What is the difference between require and import?",
+    answer: "`require` is used in CommonJS (default in Node.js), `import` is used in ES Modules with type: 'module' in package.json."
+  },
+  {
+    question: "What is the event loop in Node.js?",
+    answer: "The event loop is the mechanism that handles asynchronous callbacks in Node.js using a non-blocking I/O model."
+  },
+  {
+    question: "What is a callback function?",
+    answer: `A callback is a function passed as an argument to another function and is executed later.
+
+\`\`\`js
+fs.readFile('file.txt', (err, data) => {
+  if (err) throw err;
+  console.log(data.toString());
+});
+\`\`\``
+  },
+  {
+    question: "What is the difference between synchronous and asynchronous functions?",
+    answer: "Synchronous functions block execution until the task is finished, while asynchronous functions do not block the main thread."
+  },
+  {
+    question: "How to read a file in Node.js?",
+    answer: `Use the built-in 'fs' module:
+
+\`\`\`js
+const fs = require('fs');
+
+fs.readFile('example.txt', 'utf8', (err, data) => {
+  if (err) throw err;
+  console.log(data);
+});
+\`\`\``
+  },
+  {
+    question: "What is the purpose of the fs module?",
+    answer: "`fs` is the File System module used to interact with the file system, such as reading or writing files."
+  },
+  {
+    question: "What is the use of path module in Node.js?",
+    answer: "`path` is a core module that provides utilities for handling and transforming file paths."
+  },
+  {
+    question: "How to create a server using Node.js without Express?",
+    answer: `Use the built-in http module:
+
+\`\`\`js
+const http = require('http');
+
+const server = http.createServer((req, res) => {
+  res.write('Hello World');
+  res.end();
+});
+
+server.listen(3000);
+\`\`\``
+  },
+  {
+    question: "What is middleware in Node.js?",
+    answer: "Middleware generally applies to Express.js. In pure Node.js, middleware-like behavior is implemented manually."
+  },
+  {
+    question: "What is a stream in Node.js?",
+    answer: "Streams are used to handle reading/writing large amounts of data efficiently in chunks instead of all at once."
+  },
+  {
+    question: "What is buffer in Node.js?",
+    answer: "Buffer is a temporary storage for binary data while transferring between different streams or APIs."
+  },
+  {
+    question: "What is the use of process object in Node.js?",
+    answer: "`process` is a global object that provides information and control over the current Node.js process."
+  },
+  {
+    question: "How to handle uncaught exceptions in Node.js?",
+    answer: `Use the \`process\` event:
+
+\`\`\`js
+process.on('uncaughtException', (err) => {
+  console.error('Error:', err);
+});
+\`\`\``
+  },
+  {
+    question: "What are environment variables in Node.js?",
+    answer: "Environment variables are used to store config or sensitive data. Access them using `process.env.VARIABLE_NAME`."
+  },
+  {
+    question: "How do you make an HTTP request in Node.js?",
+    answer: `Use built-in \`https\` or external modules like \`axios\` or \`node-fetch\`.
+
+\`\`\`js
+const https = require('https');
+
+https.get('https://api.github.com', (res) => {
+  res.on('data', (chunk) => console.log(chunk.toString()));
+});
+\`\`\``
+  },
+  {
+    question: "What are some common built-in modules in Node.js?",
+    answer: "`fs`, `http`, `path`, `os`, `url`, `crypto`, `events`, `stream`, `zlib`, etc."
+  },
+  {
+    question: "What is the use of the 'os' module?",
+    answer: "It provides system-level information like hostname, platform, memory usage, CPUs, etc."
+  },
+  {
+    question: "How to handle promises in Node.js?",
+    answer: `Use \`.then()\` and \`.catch()\`, or async/await:
+
+\`\`\`js
+async function getData() {
+  try {
+    const res = await fetch('https://api.com');
+    const data = await res.json();
+    console.log(data);
+  } catch (err) {
+    console.error(err);
+  }
+}
 \`\`\``
   }
 ];
