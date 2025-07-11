@@ -12,6 +12,9 @@
 .faq-box:hover {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 }
+.uttam{
+  text-align: center;
+}
 
 .que {
   display: flex;
