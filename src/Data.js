@@ -397,5 +397,226 @@ export const Data = [
     question: "How to count documents in a collection?",
     answer: "Use db.collection.countDocuments() for an accurate count."
   },
+  const faqData = [
+  // 🔹 MongoDB Questions
+  {
+    question: "How to check MongoDB version?",
+    answer: "Use `db.version()` in the Mongo shell."
+  },
+  {
+    question: "How to show all collections in a database?",
+    answer: "Use `show collections` in the Mongo shell."
+  },
+  {
+    question: "How to switch databases in MongoDB shell?",
+    answer: "Use `use <databaseName>` to switch databases."
+  },
+  {
+    question: "How to count documents in a collection?",
+    answer: "Use `db.collection.countDocuments()` for an accurate count."
+  },
+  {
+    question: "How to insert one document into a collection?",
+    answer: "Use `db.collection.insertOne({ key: value })` in the shell."
+  },
+  {
+    question: "How to insert multiple documents?",
+    answer: "Use `db.collection.insertMany([{...}, {...}])` to insert multiple documents at once."
+  },
+  {
+    question: "How to find all documents in a collection?",
+    answer: "Use `db.collection.find()` to retrieve all documents."
+  },
+  {
+    question: "How to find documents with a condition?",
+    answer: "Use `db.collection.find({ key: value })` to filter results."
+  },
+  {
+    question: "How to update a document?",
+    answer: "Use `db.collection.updateOne({ filter }, { $set: { key: newValue } })`"
+  },
+  {
+    question: "How to delete a document?",
+    answer: "Use `db.collection.deleteOne({ key: value })`"
+  },
 
+  // 🔹 Express.js Questions (with code)
+  {
+    question: "What is Express.js?",
+    answer: "Express.js is a web framework for Node.js that simplifies server-side and API development."
+  },
+  {
+    question: "How to create a basic Express server?",
+    answer: `Example:
+\`\`\`js
+const express = require('express');
+const app = express();
+
+app.get('/', (req, res) => {
+  res.send('Hello from Express!');
+});
+
+app.listen(3000, () => console.log('Server running on port 3000'));
+\`\`\``
+  },
+  {
+    question: "How to serve static files in Express?",
+    answer: `Use \`express.static()\` middleware:
+
+\`\`\`js
+app.use(express.static('public'));
+\`\`\`
+
+Place your static files (HTML, CSS, JS) in the 'public' folder.`
+  },
+  {
+    question: "How to parse JSON body in Express?",
+    answer: `Use built-in middleware:
+
+\`\`\`js
+app.use(express.json());
+\`\`\``
+  },
+  {
+    question: "How to define routes in Express?",
+    answer: `Use route methods like \`app.get()\`, \`app.post()\`, etc.
+
+\`\`\`js
+app.get('/about', (req, res) => {
+  res.send('About Page');
+});
+\`\`\``
+  },
+  {
+    question: "How to create POST endpoint in Express?",
+    answer: `Example:
+
+\`\`\`js
+app.post('/user', (req, res) => {
+  const data = req.body;
+  res.send(data);
+});
+\`\`\``
+  },
+  {
+    question: "What is middleware in Express?",
+    answer: `Middleware functions run before final request handling.
+
+\`\`\`js
+app.use((req, res, next) => {
+  console.log('Middleware running');
+  next();
+});
+\`\`\``
+  },
+  {
+    question: "How to modularize routes using Router?",
+    answer: `Use \`express.Router()\` in a separate file:
+
+\`\`\`js
+// userRoutes.js
+const express = require('express');
+const router = express.Router();
+
+router.get('/', (req, res) => res.send('User Home'));
+
+module.exports = router;
+\`\`\`
+
+In main file:
+\`\`\`js
+const userRoutes = require('./userRoutes');
+app.use('/users', userRoutes);
+\`\`\``
+  },
+  {
+    question: "How to handle 404 error in Express?",
+    answer: `Place at the end of all routes:
+
+\`\`\`js
+app.use((req, res) => {
+  res.status(404).send('Page Not Found');
+});
+\`\`\``
+  },
+  {
+    question: "How to enable CORS in Express?",
+    answer: `Install and use CORS middleware:
+
+\`\`\`bash
+npm install cors
+\`\`\`
+
+\`\`\`js
+const cors = require('cors');
+app.use(cors());
+\`\`\``
+  },
+  {
+    question: "How to handle errors globally in Express?",
+    answer: `Use error-handling middleware:
+
+\`\`\`js
+app.use((err, req, res, next) => {
+  console.error(err.stack);
+  res.status(500).send('Something broke!');
+});
+\`\`\``
+  },
+  {
+    question: "How to upload files using Multer in Express?",
+    answer: `Install multer:
+
+\`\`\`bash
+npm install multer
+\`\`\`
+
+\`\`\`js
+const multer = require('multer');
+const upload = multer({ dest: 'uploads/' });
+
+app.post('/upload', upload.single('file'), (req, res) => {
+  res.send('File uploaded');
+});
+\`\`\``
+  },
+  {
+    question: "What is app.listen() in Express?",
+    answer: `It starts the server:
+
+\`\`\`js
+app.listen(3000, () => {
+  console.log('Server running on port 3000');
+});
+\`\`\``
+  },
+  {
+    question: "What are req.params, req.query, and req.body?",
+    answer: `- \`req.params\` → URL params (e.g., /user/:id)  
+- \`req.query\` → Query string (?search=abc)  
+- \`req.body\` → POST data (needs express.json())`
+  },
+  {
+    question: "How to implement REST API with Express?",
+    answer: `Example CRUD routes:
+
+\`\`\`js
+app.get('/items', ...);       // Read
+app.post('/items', ...);      // Create
+app.put('/items/:id', ...);   // Update
+app.delete('/items/:id', ...);// Delete
+\`\`\``
+  },
+  {
+    question: "How to connect MongoDB with Express?",
+    answer: `Use Mongoose:
+
+\`\`\`js
+const mongoose = require('mongoose');
+
+mongoose.connect('mongodb://localhost:27017/mydb')
+  .then(() => console.log('MongoDB connected'))
+  .catch(err => console.error(err));
+\`\`\``
+  }
 ];
