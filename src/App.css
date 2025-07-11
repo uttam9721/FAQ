@@ -107,6 +107,48 @@ body {
   border: none;
   cursor: pointer;
 }
+/* Hide menu toggle by default */
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Responsive sidebar styles */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+    color: #333;
+    z-index: 1001;
+  }
+
+  .nav {
+    display: none;
+    flex-direction: column;
+    background-color: white;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+
+  .nav.open {
+    display: flex;
+  }
+
+  .nav a {
+    margin: 10px 0;
+    font-size: 16px;
+    color: #333;
+    text-decoration: none;
+  }
+}
+
 
 /* Mobile nav styles */
 @media (max-width: 768px) {

@@ -1,12 +1,16 @@
 import React, { useState } from 'react';
-// import './Header.css'; // Optional if separated
+// import './Header.css'; // Make sure this includes your styles
 import './App.css'
 
 const Header = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   const toggleSidebar = () => {
-    setSidebarOpen(!sidebarOpen);
+    setSidebarOpen(prev => !prev);
+  };
+
+  const closeSidebar = () => {
+    setSidebarOpen(false);
   };
 
   return (
@@ -15,13 +19,13 @@ const Header = () => {
         <h1 className="logo">Modexa</h1>
 
         <button className="menu-toggle" onClick={toggleSidebar}>
-          ☰
+          {sidebarOpen ? '✖' : '☰'}
         </button>
 
         <nav className={`nav ${sidebarOpen ? 'open' : ''}`}>
-          <a href="#">Home</a>
-          <a href="#faq">FAQs</a>
-          <a href="#contact">Contact</a>
+          <a href="#" onClick={closeSidebar}>Home</a>
+          <a href="#faq" onClick={closeSidebar}>FAQs</a>
+          <a href="#contact" onClick={closeSidebar}>Contact</a>
         </nav>
       </div>
     </header>
