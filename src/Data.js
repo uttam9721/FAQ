@@ -296,6 +296,106 @@ export const Data = [
   {
     question: "Find Missing Number in a Sequence (O(n) Time Complexity).",
     answer: "Calculate expected sum and subtract actual sum to find the missing number."
-  }
+  },
+  {
+    question: "What is MongoDB?",
+    answer: "MongoDB is a NoSQL document database that stores data in flexible, JSON-like documents (BSON)."
+  },
+  {
+    question: "What is the difference between MongoDB and SQL databases?",
+    answer: "MongoDB is schema-less, document-oriented, and NoSQL, while SQL databases are structured and use tables."
+  },
+  {
+    question: "What is a document in MongoDB?",
+    answer: "A document is a JSON-like object containing key-value pairs that MongoDB uses to store data."
+  },
+  {
+    question: "What is a collection in MongoDB?",
+    answer: "A collection is a group of MongoDB documents, similar to a table in SQL."
+  },
+  {
+    question: "What is BSON?",
+    answer: "BSON is a binary format used to store data in MongoDB, extending JSON with additional types."
+  },
+  {
+    question: "How to insert data into a MongoDB collection?",
+    answer: "Use insertOne or insertMany methods to add documents: db.users.insertOne({ name: 'Uttam', age: 23 })"
+  },
+  {
+    question: "How to retrieve documents from a collection?",
+    answer: "Use db.collection.find() to fetch all or filtered documents."
+  },
+  {
+    question: "How to update a document in MongoDB?",
+    answer: "Use updateOne or updateMany with $set operator to modify documents."
+  },
+  {
+    question: "How to delete a document from MongoDB?",
+    answer: "Use deleteOne or deleteMany to remove documents from a collection."
+  },
+  {
+    question: "How to use projection in MongoDB?",
+    answer: "Specify fields to include or exclude in the result using db.collection.find({}, { field: 1 })"
+  },
+  {
+    question: "What are common MongoDB query operators?",
+    answer: "Operators include $gt, $lt, $in, $or, $and for advanced querying."
+  },
+  {
+    question: "How to sort results in MongoDB?",
+    answer: "Use sort() method: db.collection.find().sort({ field: 1 })"
+  },
+  {
+    question: "How to limit and skip documents?",
+    answer: "Use limit() and skip() for pagination: db.collection.find().skip(5).limit(10)"
+  },
+  {
+    question: "What is indexing in MongoDB?",
+    answer: "Indexes speed up queries by avoiding full collection scans."
+  },
+  {
+    question: "How to create an index?",
+    answer: "Use createIndex method: db.collection.createIndex({ field: 1 })"
+  },
+  {
+    question: "What is the aggregation framework in MongoDB?",
+    answer: "It processes data through stages like match, group, sort, and project for advanced analysis."
+  },
+  {
+    question: "Example of a simple aggregation query?",
+    answer: "db.collection.aggregate([{ $match: { age: { $gt: 20 } } }, { $group: { _id: '$age', total: { $sum: 1 } } }])"
+  },
+  {
+    question: "Is MongoDB schema-less?",
+    answer: "Yes, it allows storing documents with different structures in the same collection."
+  },
+  {
+    question: "How does MongoDB ensure data security?",
+    answer: "Through authentication, authorization, TLS encryption, and role-based access control (RBAC)."
+  },
+  {
+    question: "What is replication in MongoDB?",
+    answer: "Replication creates multiple copies of data (replica sets) for high availability."
+  },
+  {
+    question: "What is sharding?",
+    answer: "Sharding distributes data across multiple machines for horizontal scalability."
+  },
+  {
+    question: "How to check MongoDB version?",
+    answer: "Use db.version() in the Mongo shell."
+  },
+  {
+    question: "How to show all collections in a database?",
+    answer: "Use show collections in the Mongo shell."
+  },
+  {
+    question: "How to switch databases in MongoDB shell?",
+    answer: "Use use <databaseName> to switch databases."
+  },
+  {
+    question: "How to count documents in a collection?",
+    answer: "Use db.collection.countDocuments() for an accurate count."
+  },
 
 ];
