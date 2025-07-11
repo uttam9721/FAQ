@@ -397,48 +397,8 @@ export const Data = [
     question: "How to count documents in a collection?",
     answer: "Use db.collection.countDocuments() for an accurate count."
   },
-  const faqData = [
   // 🔹 MongoDB Questions
-  {
-    question: "How to check MongoDB version?",
-    answer: "Use `db.version()` in the Mongo shell."
-  },
-  {
-    question: "How to show all collections in a database?",
-    answer: "Use `show collections` in the Mongo shell."
-  },
-  {
-    question: "How to switch databases in MongoDB shell?",
-    answer: "Use `use <databaseName>` to switch databases."
-  },
-  {
-    question: "How to count documents in a collection?",
-    answer: "Use `db.collection.countDocuments()` for an accurate count."
-  },
-  {
-    question: "How to insert one document into a collection?",
-    answer: "Use `db.collection.insertOne({ key: value })` in the shell."
-  },
-  {
-    question: "How to insert multiple documents?",
-    answer: "Use `db.collection.insertMany([{...}, {...}])` to insert multiple documents at once."
-  },
-  {
-    question: "How to find all documents in a collection?",
-    answer: "Use `db.collection.find()` to retrieve all documents."
-  },
-  {
-    question: "How to find documents with a condition?",
-    answer: "Use `db.collection.find({ key: value })` to filter results."
-  },
-  {
-    question: "How to update a document?",
-    answer: "Use `db.collection.updateOne({ filter }, { $set: { key: newValue } })`"
-  },
-  {
-    question: "How to delete a document?",
-    answer: "Use `db.collection.deleteOne({ key: value })`"
-  },
+  
 
   // 🔹 Express.js Questions (with code)
   {
